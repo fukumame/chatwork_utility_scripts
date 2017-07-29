@@ -1,5 +1,5 @@
 $(function(){
-  var buttonHTML = '<input type="button" value="TO/REを無効化する" />';
+  var buttonHTML = '<input type="button" value="TO/REを無効化" class="button" />';
   var replaceToText = function () {
     var taskContentTextArea = $('#_taskNameInput');
     var orgText = taskContentTextArea.val();
@@ -11,7 +11,7 @@ $(function(){
 });
 
 $(function(){
-  var buttonHTML = '<input type="button" value="TOを短縮する" />';
+  var buttonHTML = '<input type="button" value="TOを短縮する" class="button" />';
   var shortenToDescription = function () {
     var messageArea = $('#_chatText');
     var orgMessage = messageArea.val();
