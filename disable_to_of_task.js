@@ -7,7 +7,9 @@ $(function(){
     replacedText = replacedText.replace(/\[返信.*\]/g, 'RE ')
     taskContentTextArea.val(replacedText);
   };
-  $(buttonHTML).appendTo('div.addTaskContainer__submitContainer').click(replaceToText);
+  $(buttonHTML).appendTo('div.addTaskContainer__submitContainer')
+    .click(replaceToText)
+    .css({'margin-top':'5px'});
 });
 
 $(function(){
@@ -20,5 +22,6 @@ $(function(){
     replacedMessage = replacedMessage.replace(/(\[To\:.+\])/, '$1\n');
     messageArea.val(replacedMessage)
   };
-  $(buttonHTML).prependTo('div.chatInput__submitContainer').click(shortenToDescription)
+  $(buttonHTML).prependTo('div.chatInput__submitContainer')
+    .click(shortenToDescription)
 });
