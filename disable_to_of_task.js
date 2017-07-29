@@ -11,7 +11,7 @@ $(function(){
 });
 
 $(function(){
-  var buttonHTML = '<input type="button" value="TOを短縮" />';
+  var buttonHTML = '<input type="button" value="TOを短縮する" />';
   var shortenToDescription = function () {
     var messageArea = $('#_chatText');
     var orgMessage = messageArea.val();
