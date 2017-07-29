@@ -1,5 +1,5 @@
 $(function(){
-  var buttonHTML = '<input type="button" value="TO/REを無効化" />';
+  var buttonHTML = '<input type="button" value="TO/REを無効化する" />';
   var replaceToText = function () {
     var taskContentTextArea = $('#_taskNameInput');
     var orgText = taskContentTextArea.val();
