@@ -4,7 +4,8 @@ $(function(){
     var taskContentTextArea = $('#_taskNameInput');
     var orgText = taskContentTextArea.val();
     var replacedText = orgText.replace(/\[To\:.*\]/g, 'TO ');
-    replacedText = replacedText.replace(/\[返信.*\]/g, 'RE ')
+    replacedText = replacedText.replace(/\[返信.*\]/g, 'RE ');
+    replacedText = replacedText.replace(/\[rp.*\]/g, 'RE ');
     taskContentTextArea.val(replacedText);
   };
   $(buttonHTML).appendTo('div.addTaskContainer__submitContainer')
