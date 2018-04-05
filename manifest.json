@@ -1,12 +1,13 @@
 {
   "manifest_version": 2,
-  "name": "Chatwork Disable Enter Key",
-  "version": "1.0.0",
+  "name": "Chatwork Utility Extension",
+  "version": "1.0.1",
   "description": "ChatworkのTOを省略したり、Taskの追加時に、意図せずTOに含まれる人にメンションが上がるのを防ぐプラグインです。",
   "content_scripts": [
     {
       "matches": ["https://kcw.kddi.ne.jp/*", "https://www.chatwork.com/*"],
-      "js": ["jquery-3.2.1.min.js", "disable_to_of_task.js"]
+      "js": ["jquery-3.2.1.min.js", "disable_to_of_task.js"],
+      "run_at": "document_end"
     }
   ]
 }
