@@ -3,9 +3,9 @@ $(document).ready(() => {
   const replaceToText =  () => {
     const taskContentTextArea = $('#_taskNameInput');
     const orgText = taskContentTextArea.val();
-    let replacedText = orgText.replace(/\[To\:.*\]/g, 'TO ');
-    replacedText = replacedText.replace(/\[返信.*\]/g, 'RE ');
-    replacedText = replacedText.replace(/\[rp.*\]/g, 'RE ');
+    let replacedText = orgText.replace(/\[To:.*]/g, 'TO ');
+    replacedText = replacedText.replace(/\[返信.*]/g, 'RE ');
+    replacedText = replacedText.replace(/\[rp.*]/g, 'RE ');
     taskContentTextArea.val(replacedText);
   };
   const appendDisableButton = () => {
@@ -18,9 +18,9 @@ $(document).ready(() => {
   const shortenToDescription =  () => {
     const messageArea = $('#_chatText');
     const orgMessage = messageArea.val();
-    let replacedMessage = orgMessage.replace(/(\[To\:[0-9]+\])(.+)(\n)?/mg, '$1');
+    let replacedMessage = orgMessage.replace(/(\[To:[0-9]+])(.+)(\n)?/mg, '$1');
     // 最後に改行を入れる
-    replacedMessage = replacedMessage.replace(/(\[To\:.+\])/, '$1\n');
+    replacedMessage = replacedMessage.replace(/(\[To:.+])/, '$1\n');
     messageArea.val(replacedMessage)
   };
 
